@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding-right: 0;
+    box-sizing: border-box;
+    
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: beige;
+}
+.wrapper{
+    width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.image {
+    width: 22%;
+    height: 170px;
+    overflow: hidden;
+    margin: 8px 17px;
+    cursor: pointer;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.3s;
+}
+.image img:hover{
+    transform: scale(1.2);
+}
+.modal{
+    display: flex;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0,0 , 0.85);
+    display: none;
+    animation: popUp ease 0.2s ;
+    
+}
+.modal__img{
+    width: 50%;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.modal__img img{
+    width: 100%;
+    height: 100%;
+}
+.modal--prev{
+    width: 100px;
+    height: 50px;
+}
+.modal--prev i{
+    transform: scale(3);
+    margin-left: 50px;
+    color: rgb(159, 148, 148);
+    cursor: pointer;
+}
+.modal--next i{
+    transform: scale(3);
+    margin-right: 50px;
+    color: rgb(159, 148, 148);
+    cursor: pointer;
+}
+.active{
+    display: flex;
+}
+.modal--close{
+    position: absolute;
+    top: 7%;
+    right: 3%;
+    color: rgb(159, 148, 148);
+    transform: scale(2);
+    cursor: pointer;
+}
+.disable{
+    visibility: hidden;    
+}
+@keyframes popUp {
+    from{
+        transform: scale(0.7);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+
